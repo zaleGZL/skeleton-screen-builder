@@ -1,0 +1,91 @@
+/* ske-co- 识别标志不可删除 */
+
+body {
+    margin: 0;
+}
+
+.ske-co-root {
+    flex-direction: column;
+}
+
+.ske-co-flex {
+    display: flex;
+}
+
+.ske-co-filling {
+    background-color: lightgrey;
+    opacity: 0.5;
+}
+
+.ske-co-header {
+    height: 50px;
+    margin: 0 0 30px 0;
+    justify-content: space-between;
+    align-items: center;
+    background: #414852;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.ske-co-brand {
+    width: 120px;
+    height: 30px;
+    margin: 0 0 0 20px;
+}
+
+.ske-co-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+.ske-co-topnav-menu {
+    width: 50px;
+    height: 25px;
+    margin: 3px 40px 0 10px;
+}
+
+.ske-co-menu {
+    width: 200px;
+    flex-direction: column;
+    margin: 0 0 0 20px;
+}
+
+.ske-co-item {
+    width: 70px;
+    height: 30px;
+    margin:  0 0 15px 0;
+}
+
+.ske-co-new-item {
+    margin: 20px 0 15px 0;
+}
+
+.ske-co-sub-item {
+    width: 180px;
+    height: 20px;
+    margin:  0 0 10px 0;
+}
+
+.ske-co-content {
+    margin: 0 40px;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.ske-co-title {
+    height: 45px;
+    width: 210px;
+    margin: 0 0 20px 0;
+}
+
+.ske-co-form {
+    height: 300px;
+    width: 80%;
+    margin: 0 0 50px 0;
+}
+
+.ske-co-next-step {
+    height: 38px;
+    width: 330px;
+}
+

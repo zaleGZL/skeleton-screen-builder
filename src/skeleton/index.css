@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+}
+
+.skeleton {
+    width: 360px;
+    height: 100px;
+    margin: 150px auto 0 auto;
+    display: flex;
+}
+
+.skeleton-content {
+    background-color: #e2e2e2;
+    opacity: 0.5;
+}
+
+.skeleton-head {
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
+}
+
+.skeleton-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.skeleton-title {
+    height: 30px;
+    width: 210px;
+    margin: 5px 0 0 10px;
+}
+
+.skeleton-article {
+    height: 30px;
+    width: 150px;
+    margin: 15px 0 0 10px;
+}
+
+.titile {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 36px;
+}
+
+.small-title {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+.opertion {
+    text-align: center;
+    margin: 45px 0;
+}
+
+.button {
+    background-color: #4CAF50;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    min-width: 900px;
+}
+
+.modal-hide {
+    display: none;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tag-group {
+    margin: 5px;
+}
+
+.tag {
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    padding: 0 7px;
+    font-size: 14px;
+    height: 26px;
+    line-height: 26px;
+    border: 1px solid black;
+}
+
+.tag:hover,
+.tag:focus {
+    cursor: pointer;
+}
+
+.tag-select {
+    background: #e8e8e8;
+}
+
+.tag-no-select {
+    background: #fff;
+}
+
+.modal-title {
+    margin: 15px 10px 5px 0;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.modal-section {
+    margin: 0 10px;
+}
+
+.main-content {
+    margin: 5px 0 10px 0;
+    display: flex;
+}
+
+.content-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-textarea {
+    height: 110px;
+    width: 235px;
+    resize: none;
+}

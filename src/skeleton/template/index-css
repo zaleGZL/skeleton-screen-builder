@@ -1,0 +1,57 @@
+/* ske-${_cssPrefix}- 识别标志不可删除 */
+
+body {
+    margin: 0;
+}
+
+.ske-${_cssPrefix}-root {
+    flex-direction: column;
+}
+
+.ske-${_cssPrefix}-flex {
+    display: flex;
+}
+
+.ske-${_cssPrefix}-filling {
+    background-color: lightgrey;
+    opacity: 0.5;
+}
+
+.ske-${_cssPrefix}-header {
+    height: 50px;
+    margin: 0 0 30px 0;
+    justify-content: space-between;
+    align-items: center;
+    background: #406dad;
+}
+
+.ske-${_cssPrefix}-brand {
+    width: 120px;
+    height: 30px;
+    margin: 0 0 0 20px;
+}
+
+.ske-${_cssPrefix}-topnav {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    margin: 0 20px 0 0;
+}
+
+.ske-${_cssPrefix}-menu {
+    width: 200px;
+    flex-direction: column;
+    margin: 0 0 0 20px;
+}
+
+.ske-${_cssPrefix}-item {
+    width: 165px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.ske-${_cssPrefix}-content {
+    margin: 0 40px;
+    height: 600px;
+    flex: 1 1 auto;
+}

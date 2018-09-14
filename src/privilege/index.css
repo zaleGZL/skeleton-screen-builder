@@ -1,0 +1,86 @@
+/* ske-pm- 识别标志不可删除 */
+
+body {
+    margin: 0;
+}
+
+.ske-pm-root {
+    flex-direction: column;
+}
+
+.ske-pm-flex {
+    display: flex;
+}
+
+.ske-pm-filling {
+    background-color: lightgrey;
+    opacity: 0.5;
+}
+
+.ske-pm-header {
+    height: 50px;
+    margin: 0 0 30px 0;
+    justify-content: space-between;
+    align-items: center;
+    background: #414852;
+}
+
+.ske-pm-brand {
+    width: 195px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+.ske-pm-topnav {
+    width: 135px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.ske-pm-menu {
+    width: 200px;
+    flex-direction: column;
+    margin: 0 0 0 20px;
+}
+
+.ske-pm-item {
+    width: 165px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.ske-pm-content {
+    flex-direction: column;
+    margin: 0 20px 0 40px;
+    flex: 1 1 auto;
+}
+
+.ske-pm-tab {
+    margin: 0 0 30px 0;
+}
+
+.ske-pm-tab-item {
+    width: 145px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.ske-pm-bar {
+    justify-content: space-between;
+}
+
+.ske-pm-search-input {
+    width: 285px;
+    height: 41px;
+    margin: 0 10px 0 0;
+}
+
+.ske-pm-create-button {
+    width: 117px;
+    height: 36px;
+}
+
+.ske-pm-list {
+    height: 400px;
+    margin: 20px 0 0 0;
+}

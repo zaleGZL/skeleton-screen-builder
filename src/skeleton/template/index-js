@@ -1,0 +1,33 @@
+import React, { PureComponent } from 'react';
+import './index.css';
+
+class ${_Component} extends PureComponent {
+    componentDidMount() {
+        const { generateHtmlAndCss } = this.props;
+        generateHtmlAndCss && generateHtmlAndCss();
+    }
+    
+    render() {
+        return (
+            <div className='ske-${_cssPrefix}-root ske-${_cssPrefix}-flex'>
+            <div className='ske-${_cssPrefix}-header ske-${_cssPrefix}-flex'>
+                <div className='ske-${_cssPrefix}-filling ske-${_cssPrefix}-brand'></div>
+                <div className='ske-${_cssPrefix}-filling ske-${_cssPrefix}-topnav'></div>
+            </div>
+            <div className="ske-${_cssPrefix}-flex ske-${_cssPrefix}-body">
+                <div className='ske-${_cssPrefix}-menu ske-${_cssPrefix}-flex'>
+                    <div className='ske-${_cssPrefix}-filling ske-${_cssPrefix}-item'></div>
+                    <div className='ske-${_cssPrefix}-filling ske-${_cssPrefix}-item'></div>
+                    <div className='ske-${_cssPrefix}-filling ske-${_cssPrefix}-item'></div>
+                    <div className='ske-${_cssPrefix}-filling ske-${_cssPrefix}-item'></div>
+                    <div className='ske-${_cssPrefix}-filling ske-${_cssPrefix}-item'></div>
+                </div>
+                <div className='ske-${_cssPrefix}-content ske-${_cssPrefix}-filling'>
+                </div>
+            </div>
+        </div>
+        )
+    }
+}
+
+export default ${_Component};
