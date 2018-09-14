@@ -5,7 +5,6 @@ import Skeleton from './skeleton';
 import Privilege from './privilege';
 import OrderManagement from './orderManagement';
 import CreateOrder from './createOrder';
-import SkeletonTemplate from './skeletonTemplate';
 
 const skeletonPage = [
     {
@@ -23,11 +22,6 @@ const skeletonPage = [
         label: '新建订单',
         cssPrefix: 'ske-co-',
         component: CreateOrder
-    }, {
-        name: 'SkeletonTemplate',
-        label: '骨架屏模板',
-        cssPrefix: 'ske-st-',
-        component: SkeletonTemplate
     }];
 
 class App extends Component {

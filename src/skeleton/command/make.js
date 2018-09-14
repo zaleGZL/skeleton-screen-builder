@@ -19,6 +19,7 @@ function printErrorMessage(errorMessage) {
 // 检查参数个数是否正确
 if (args.length !== 4) {
     printErrorMessage('参数个数错误，该命令只需要两个参数.');
+    return;
 }
 
 // 检查组件名称的正确性

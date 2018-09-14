@@ -15,7 +15,7 @@ class HomePage extends PureComponent {
                 </div>
 
                 <p className='titile'>Skeleton Screen Builder</p>
-                <h2 className='small-title'>骨架屏辅助制作工具</h2>
+                <h2 className='small-title'>手写骨架屏辅助工具</h2>
 
                 <div className='opertion'>
                     <button className='button' onClick={onClickEnterButton}>

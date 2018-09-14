@@ -65,7 +65,7 @@ class Skeleton extends PureComponent {
                         <span className="close" onClick={() => {
                             this.setStateValue('showControlPanelModal', false);
                         }}>&times;</span>
-                        <p>骨架屏辅助制作工具</p>
+                        <p>手写骨架屏辅助工具</p>
                         <h2 className='modal-title'>选择骨架屏</h2>
                         <div className='tag-group'>
                             {
