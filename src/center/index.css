@@ -1,0 +1,59 @@
+/* ske-ct- 识别标志不可删除 */
+
+.ske-ct-root {
+    top: 80px;
+    left: 0;
+    position: fixed;
+    padding: 0 40px;
+    margin: 20px auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ske-ct-container {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1360px;
+    max-width: 1360px;
+}
+
+.ske-ct-flex {
+    display: flex;
+}
+
+.ske-ct-fill {
+    background: linear-gradient(90deg, #f2f2f2 25%, #e6e6e6 37%, #f2f2f2 63%);
+    background-size: 400% 100%;
+    animation: ske-ct-animation 1.4s ease infinite;
+}
+
+.ske-ct-title {
+    width: 180px;
+    height: 40px;
+}
+
+.ske-ct-subTitle {
+    margin-top: 15px;
+    width: 250px;
+    height: 25px;
+}
+
+.ske-ct-main {
+    margin-top: 70px;
+    flex-direction: column;
+}
+
+.ske-ct-item {
+    height: 20px;
+    flex: 1 1 auto;
+    margin-bottom: 30px;
+}
+
+@keyframes ske-ct-animation {
+    0% {
+        background-position: 100% 50%;
+      }
+    100% {
+        background-position: 0 50%;
+    }
+}

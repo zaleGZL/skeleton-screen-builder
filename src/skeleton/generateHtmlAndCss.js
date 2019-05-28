@@ -10,12 +10,15 @@ const csso = require('csso');
 const generateHtmlAndCss = (originalHtml, originalCss, cssPrefix) => {
     let htmlContent;
     let cssContent;
+    let originHtmlContent;
+    let originCssContent;
 
     let reg = /class="[a-zA-Z0-9\s-]+?"/g;
     const match = originalHtml.match(reg) || [];
     let allClassName = [];
     let randomClassName = [];
-    let byteCount = 0;
+    let byteCount = [0, 0, 0];
+    let originByteCount = [0, 0, 0];
 
     // 提取出类名
     for (let i = 0; i < match.length; i++) {
@@ -56,7 +59,12 @@ const generateHtmlAndCss = (originalHtml, originalCss, cssPrefix) => {
     }
     cssContent = csso.minify(cssContent).css;
 
-    byteCount = htmlContent.length + cssContent.length;
+    // 原始 html 和 css 内容
+    originHtmlContent = originalHtml;
+    originCssContent = csso.minify(originalCss).css;
+
+    byteCount = [htmlContent.length, cssContent.length, htmlContent.length + cssContent.length];
+    originByteCount = [originHtmlContent.length, originCssContent.length, originHtmlContent.length + originCssContent.length];
 
     // test
     console.log(htmlContent.length);
@@ -65,6 +73,9 @@ const generateHtmlAndCss = (originalHtml, originalCss, cssPrefix) => {
     return {
         htmlContent,
         cssContent,
+        originHtmlContent,
+        originCssContent,
+        originByteCount,
         byteCount
     }
 }

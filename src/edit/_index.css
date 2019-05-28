@@ -1,0 +1,115 @@
+/* ske-ed- 识别标志不可删除
+
+body {
+    margin: 0;
+}
+
+.ske-ed-root {
+    flex-direction: column;
+}
+
+.ske-ed-flex {
+    display: flex;
+}
+
+.ske-ed-filling {
+    background-color: lightgrey;
+    opacity: 0.5;
+}
+
+.ske-ed-header {
+    height: 50px;
+    margin: 0 0 30px 0;
+    justify-content: space-between;
+    align-items: center;
+    background: #406dad;
+}
+
+.ske-ed-brand {
+    width: 120px;
+    height: 30px;
+    margin: 0 0 0 20px;
+}
+
+.ske-ed-topnav {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    margin: 0 20px 0 0;
+}
+
+.ske-ed-menu {
+    width: 200px;
+    flex-direction: column;
+    margin: 0 0 0 20px;
+}
+
+.ske-ed-item {
+    width: 165px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.ske-ed-content {
+    margin: 0 40px;
+    height: 600px;
+    flex: 1 1 auto;
+} */
+
+/* ske-ed- 识别标志不可删除 */
+
+body {
+    margin: 0;
+}
+
+.ske-ed-root {
+    margin: 90px auto;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0 40px;
+    max-width: 1360px;
+    min-height: 700px;
+}
+
+.ske-ed-flex {
+    display: flex;
+}
+
+.ske-ed-filling {
+    background: linear-gradient(90deg, #f2f2f2 25%, #e6e6e6 37%, #f2f2f2 63%);
+    background-size: 400% 100%;
+    animation: ske-ed-animation 1.4s ease infinite;
+}
+
+.ske-ed-title {
+    width: 180px;
+    height: 40px;
+}
+
+.ske-ed-subTitle {
+    margin-top: 15px;
+    width: 250px;
+    height: 25px;
+}
+
+.ske-ed-main {
+    margin-top: 70px;
+    flex-direction: column;
+}
+
+.ske-ed-item {
+    height: 20px;
+    flex: 1 1 auto;
+    margin-bottom: 30px;
+}
+
+@keyframes ske-ed-animation {
+    0% {
+        background-position: 100% 50%;
+      }
+    100% {
+        background-position: 0 50%;
+    }
+}

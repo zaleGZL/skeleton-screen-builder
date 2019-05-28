@@ -14,7 +14,10 @@ class Skeleton extends PureComponent {
             showControlPanelModal: false, // 是否展示骨架屏制作控制台
             htmlContent: '', // 该骨架屏对应的 html
             cssContent: '', // 该骨架屏对应的 css
-            byteCount: 0 // html 和 css 的总字节数
+            byteCount: [0, 0, 0], // html、css、总字节数
+            originHtmlContent: '', // 原始 html 内容
+            originCssContent: '', // 原始 css 内容
+            originByteCount: [0, 0, 0], // 原始 html、原始 css、原始总字节数
         };
     }
 
@@ -46,7 +49,7 @@ class Skeleton extends PureComponent {
     }
 
     render() {
-        const { showControlPanelModal, htmlContent, cssContent, byteCount } = this.state;
+        const { showControlPanelModal, htmlContent, cssContent, byteCount, originHtmlContent, originCssContent, originByteCount } = this.state;
         const { skeletonPage, history, location } = this.props;
         const skeletonName = location.hash.replace('#', '');
         const modalClass = classNames({
@@ -84,18 +87,33 @@ class Skeleton extends PureComponent {
                         <h2 className='modal-title'>HTML & CSS</h2>
                         <div className='main-content'>
                             <div className='content-box'>
-                                <p className='content-title'>HTML</p>
+                                <p className='content-title'>HTML ({byteCount[0]} Bytes)</p>
                                 <textarea className='content-textarea'
                                     value={htmlContent} readOnly />
                             </div>
                             <div className='content-box'>
-                                <p className='content-title'>CSS</p>
+                                <p className='content-title'>CSS ({byteCount[1]} Bytes)</p>
                                 <textarea className='content-textarea'
                                     value={cssContent} readOnly />
                             </div>
                         </div>
-                        <h2 className='modal-title'>文件大小</h2>
-                        <p className='modal-section'>{byteCount} Bytes</p>
+                        <h2 className='modal-title'>总大小</h2>
+                        <p className='modal-section'>{byteCount[2]} Bytes</p>
+                        <h2 className='modal-title'>原始 HTML & 原始 CSS</h2>
+                        <div className='main-content'>
+                            <div className='content-box'>
+                                <p className='content-title'>原始 HTML ({originByteCount[0]} Bytes)</p>
+                                <textarea className='content-textarea'
+                                    value={originHtmlContent} readOnly />
+                            </div>
+                            <div className='content-box'>
+                                <p className='content-title'> 原始 CSS ({originByteCount[1]} Bytes)</p>
+                                <textarea className='content-textarea'
+                                    value={originCssContent} readOnly />
+                            </div>
+                        </div>
+                        <h2 className='modal-title'>总大小</h2>
+                        <p className='modal-section'>{[originByteCount[2]]} Bytes</p>
                     </div>
                 </div>
             </div>
@@ -141,12 +159,15 @@ class Skeleton extends PureComponent {
         const styleElement = Array.prototype.find.call(styles, (style) => style.textContent.indexOf(cssPrefix) >= 0);
         const originalCss = styleElement ? styleElement.textContent : '';
 
-        const { htmlContent, cssContent, byteCount } = generateHtmlAndCss(originalHtml, originalCss, cssPrefix);
+        const { htmlContent, cssContent, byteCount, originHtmlContent, originCssContent, originByteCount } = generateHtmlAndCss(originalHtml, originalCss, cssPrefix);
         
         this.setState({
             htmlContent,
             cssContent,
-            byteCount
+            byteCount,
+            originHtmlContent,
+            originCssContent,
+            originByteCount
         });
     }
 
